@@ -1,0 +1,57 @@
+{
+  "name": "generator-fountain-choo",
+  "version": "1.0.0-rc1",
+  "description": "Yeoman Fountain generator to scaffold a webapp with Choo.js written in ES6 (Babel) through Webpack including tools Gulp 4, ESLint, Browsersync and Karma",
+  "homepage": "",
+  "repository": "fountainjs/generator-fountain-choo",
+  "author": "The Fountain Team",
+  "contributors": [
+    "Carl Ogren <cogren@eleven-labs.com> (http://eleven-labs.com/)"
+  ],
+  "main": "index.js",
+  "keywords": [
+    "yeoman-generator",
+    "yeoman",
+    "generator",
+    "gulp",
+    "gulpfile",
+    "fountain",
+    "cli",
+    "choo"
+  ],
+  "dependencies": {
+    "fountain-generator": "^1.0.0-rc1",
+    "generator-fountain-gulp": "^1.0.0-rc1"
+  },
+  "devDependencies": {
+    "ava": "^0.16.0",
+    "babel-eslint": "^6.0.2",
+    "chai": "^3.4.1",
+    "chai-spies": "^0.7.1",
+    "cross-spawn": "^4.0.0",
+    "eslint": "^3.2.2",
+    "eslint-config-xo-space": "^0.12.0",
+    "eslint-plugin-babel": "^3.2.0",
+    "gulp": "gulpjs/gulp#4.0",
+    "gulp-eslint": "^2.0.0",
+    "gulp-exclude-gitignore": "^1.0.0",
+    "gulp-nsp": "^2.4.0",
+    "nyc": "^6.6.1"
+  },
+  "nyc": {
+    "include": [
+      "generators/**/*.js"
+    ],
+    "exclude": [
+      "generators/**/templates/**"
+    ]
+  },
+  "scripts": {
+    "test": "gulp",
+    "prepublish": "gulp prepublish"
+  },
+  "license": "MIT",
+  "eslintConfig": {
+    "extends": "xo-space/esnext"
+  }
+}

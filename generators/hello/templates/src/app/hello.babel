@@ -1,0 +1,9 @@
+const html = require('choo/html');
+
+module.exports = state => {
+  return html `
+    <div id="root">
+      <h1>Hello ${state.name}!</h1>
+    </div>
+  `;
+};

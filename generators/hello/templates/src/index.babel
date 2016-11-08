@@ -1,0 +1,18 @@
+const choo = require('choo');
+
+const app = choo();
+
+require('./index.<%- css %>');
+
+app.model({
+  state: {
+    name: 'world'
+  }
+});
+
+app.router(route => [
+  route('/', require('./app/hello'))
+]);
+
+const tree = app.start();
+document.body.appendChild(tree);

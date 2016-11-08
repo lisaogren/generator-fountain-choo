@@ -1,0 +1,22 @@
+const http = require('choo/http');
+
+module.exports = {
+  namespace: 'techs',
+  state: {
+    list: []
+  },
+  effects: {
+    fetch: (data, state, send, done) => {
+      http('/app/techs/techs.json', {json: {}}, (err, res, body) => {
+        if (err) {
+          done(err);
+        }
+
+        send('techs:set', body, done);
+      });
+    }
+  },
+  reducers: {
+    set: data => ({list: data})
+  }
+};

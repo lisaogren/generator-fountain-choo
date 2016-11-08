@@ -1,0 +1,19 @@
+const html = require('choo/html');
+
+const header = require('./header');
+const title = require('./title');
+const techs = require('./techs/techs');
+const footer = require('./footer');
+
+module.exports = (state, prev, send) => {
+  return html `
+    <div id="root">
+      ${header()}
+      <main>
+        ${title()}
+        ${techs(state, send)}
+      </main>
+      ${footer()}
+    </div>
+  `;
+};

@@ -1,0 +1,22 @@
+const html = require('choo/html');
+
+const tech = require('./tech');
+
+module.exports = (state, send) => {
+  const {list} = state.techs;
+
+  if (!list.length) {
+    send('techs:fetch');
+  }
+
+  return html `
+    <div class="techs-container">
+      <h2 class="techs-h2">
+        Cooked with all these awesome technologies:
+      </h2>
+      <div class="techs">
+        ${list.map(item => tech(item))}
+      </div>
+    </div>
+  `;
+};
