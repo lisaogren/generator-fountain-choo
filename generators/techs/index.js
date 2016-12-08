@@ -16,7 +16,7 @@ module.exports = fountain.Base.extend({
         'src/index.js',
 
         'src/app/techs/tech.js',
-        // 'src/app/techs/Tech.spec.js',
+        'src/app/techs/tech.spec.js',
         'src/app/techs/techs.js',
         // 'src/app/techs/Techs.spec.js',
         'src/app/footer.js',
